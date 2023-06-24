@@ -1,0 +1,56 @@
+def perform_logical_operation(operation, operand1, operand2):
+    if operation == '1':
+        return operand1 and operand2
+    elif operation == '2':
+        return operand1 or operand2
+    elif operation == '3':
+        return not operand1
+    elif operation == '4':
+        return not operand2
+    elif operation == '5':
+        return operand1 and not operand2
+    elif operation == '6':
+        return operand1 or not operand2
+    elif operation == '7':
+        return not operand1 and operand2
+    elif operation == '8':
+        return not operand1 or operand2
+    else:
+        print("Invalid operation")
+        return None
+
+def get_input(message):
+    value = input(message)
+    return value.lower()
+
+def get_boolean_input(message):
+    value = input(message)
+    return value.lower() == 'true'
+
+def print_menu():
+    print("Logical Operations Menu")
+    print("1. AND")
+    print("2. OR")
+    print("3. NOT (Operand 1)")
+    print("4. NOT (Operand 2)")
+    print("5. AND (Operand 1 and NOT Operand 2)")
+    print("6. OR (Operand 1 or NOT Operand 2)")
+    print("7. AND (NOT Operand 1 and Operand 2)")
+    print("8. OR (NOT Operand 1 or Operand 2)")
+    print("0. Exit")
+
+# Main program loop
+while True:
+    print_menu()
+    choice = get_input("Enter your choice (0-8): ")
+
+    if choice == '0':
+        print("Exiting...")
+        break
+
+    operand1 = get_boolean_input("Enter Operand 1 (True/False): ")
+    operand2 = get_boolean_input("Enter Operand 2 (True/False): ")
+
+    result = perform_logical_operation(choice, operand1, operand2)
+    if result is not None:
+        print("Result:", result)

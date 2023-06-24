@@ -1,0 +1,20 @@
+# Define a user-defined function to calculate the sum of a list
+def sum(numbers):
+    total_sum = 0
+    for num in numbers:
+        total_sum += num
+    return total_sum
+
+
+# Take input from the user for a list of integers
+numbers = []
+n = int(input("Enter the number of elements: "))
+for i in range(n):
+    num = int(input("Enter an integer: "))
+    numbers.append(num)
+
+# Call the user-defined function to calculate the sum of the list
+sum_num = sum(numbers)
+
+# Print the sum of the list
+print("Sum of the numbers:", sum_num)

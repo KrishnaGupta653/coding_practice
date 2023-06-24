@@ -1,0 +1,8 @@
+# Create a dictionary of radius and circumference of a circle
+radius_list = range(1, 11)  # create a list of radius values from 1 to 10
+
+circumference_dict = {radius: 2 * 3.14 * radius for radius in radius_list}
+# use a dictionary comprehension to create a dictionary where the key is the radius and the value is the circumference of the circle
+# the value is calculated using the formula: circumference = 2 * pi * radius
+
+print(circumference_dict)

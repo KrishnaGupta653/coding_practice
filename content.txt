@@ -1,0 +1,3 @@
+This is a sample file.
+It contains some numbers like 123 and 45.
+The sum of all the digits should be calculated.

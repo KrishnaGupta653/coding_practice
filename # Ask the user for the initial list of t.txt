@@ -1,0 +1,34 @@
+# Ask the user for the initial list of toppers
+toppers = []
+n = int(input("Enter the number of toppers: "))
+for i in range(n):
+    name = input("Enter the name of topper",(i+1))
+    m = []
+    for j in range(3):
+        mark = int(input("Enter the mark of subject:"(j+1)))
+        m.append(mark)
+    toppers.append([name]+ m)
+
+# Print the initial list of toppers
+print("Initial List of Toppers:")
+for topper in toppers:
+    print(topper)
+
+# Ask the user for the index of the topper to be edited
+index = int(input("Enter the index of the topper to be edited (0 to {})",(len(toppers) - 1)))
+
+# Ask the user for the new details of the topper
+name = input("Enter the new name of the topper: ")
+m = []
+for i in range(3):
+    mark = int(input("Enter the new mark in subject",(i + 1)))
+    m.append(mark)
+
+# Update the details of the topper in the nested list
+toppers[index][0] = name
+toppers[index][1:] = m
+
+# Print the updated list of toppers
+print("Updated List of Toppers:")
+for topper in toppers:
+    print(topper)
